@@ -20,7 +20,23 @@ def create
     end
 end
 
+ def edit
+    # @user = User.find(params[:id])
+    unless @user = current_user
+      redirect_to user_uerl(@user)
+    end
+ end
 
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = "Update your profile"
+      redirect_to user_url(@user)
+    else
+      render 'edit'
+    end
+  end
 
   private
 
