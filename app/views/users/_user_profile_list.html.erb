@@ -1,0 +1,6 @@
+<!-- フォローしてる/されている人を一覧表示するために利用 -->
+<% user_list.each do |f| %>
+  <div class="col-lg-3 col-sm-6">
+    <%= render 'user_profile', user: f %>
+  </div>
+<% end %>

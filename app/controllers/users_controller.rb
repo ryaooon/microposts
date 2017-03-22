@@ -20,7 +20,23 @@ def create
     end
 end
 
-
+ # フォローしているユーザの表示
+  def followings
+    @followings = User.find(params[:id]).following_users
+    #binding.pry
+    #@following = Relationship.where(follower_id: params[:id])
+    # フォローしているユーザを検索
+    #@following_user = User.find(@following.ids)
+    #@following = @following_user #Relationship.where(follower_id: params[:id])
+  end
+  
+  # フォローされているユーザを表示
+  def followers
+    # .follower_usersでフォローされているユーザの集まりを取得可能
+    # app/models/user.rb参考
+    @followers = User.find(params[:id]).follower_users
+  end
+  
 
   private
 
