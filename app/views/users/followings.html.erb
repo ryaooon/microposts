@@ -1,0 +1,3 @@
+<h1><%= User.find(params[:id]).name %>がフォローしているユーザ</h1>
+
+<%= render 'user_profile_list' , user_list: @followings %>

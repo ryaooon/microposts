@@ -20,7 +20,10 @@ def create
     end
 end
 
-
+def favorites
+    @user = User.find(params[:id])
+    @f_microposts = @user.favorite_microposts
+end
 
   private
 

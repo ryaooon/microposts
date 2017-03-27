@@ -1,0 +1,19 @@
+<!-- プロフィールの表示 -->
+<div class="card hovercard">
+  <div class="cardheader">
+  
+  </div>
+    
+  <div class="avatar">
+    <%= gravatar_for user %>
+  </div>
+  <div class="info">
+    <div class="title">
+      <!-- ユーザー名をクリックすると，そのユーザーページへ -->
+      <%= link_to user.name, user %>
+    </div>
+    <div class="desc">
+     
+    </div>
+  </div>
+</div>

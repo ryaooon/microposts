@@ -1,0 +1,5 @@
+<h1><%= User.find(params[:id]).name %>がお気に入りしている投稿</h1>
+<% if @f_microposts.present? then %>
+  <% @f_microposts.each do |micropost| %>
+  <% end %>
+<% end %>
