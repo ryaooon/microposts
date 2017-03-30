@@ -5,9 +5,10 @@
       <%= render 'user_profile' , user: @user %>
       
       <!-- フォローしている/されているユーザリストへのリンク　-->
-      <%= link_to "フォロー",  followings_user_path(@user.id) %>
+      <%= link_to "follow ",  followings_user_path(@user.id) %>
       /
-      <%= link_to "フォロワー",  followers_user_path(@user.id) %>
+      <%= link_to "follower",  followers_user_path(@user.id) %>
+      /
 <%= link_to "favorite", favorites_user_path(@user.id) %>
     </section>
   </aside>
