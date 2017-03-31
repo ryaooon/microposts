@@ -9,6 +9,15 @@ class Micropost < ActiveRecord::Base
   def favorite?(user)
     favorite_users.include?(user)
   end
+  
+  def self.search(search)
+    if search
+      Micropost.where(['content LIKE ?', "%#{search}%"])
+    else
+      Micropost.all
+    end
+  end
+  
 end
 
 

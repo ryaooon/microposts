@@ -7,6 +7,14 @@
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
+      <section>
+        <%= form_tag root_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+          <p>
+           <%= text_field_tag :search, params[:search] %>
+           <%= submit_tag "Search", :name => nil %>
+          </p>
+       <% end %>
+      </section>
     </aside>
     <div class="col-md-8">
       <h3>Micropost Feed</h3>
